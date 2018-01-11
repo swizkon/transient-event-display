@@ -2,16 +2,16 @@
  .footer
     hr
     footer
-        p &copy; {{copyright}}
+        p {{copyright}}
 </template>
 
 <script>
-  module.exports = {
+    module.exports = {
     name: 'app-footer',
     data() {
-      return {
-        copyright: '2018 - swizkon'
-      }
+    return {
+    copyright: 'Transient Event Display'
     }
-  }
+    }
+    }
 </script>

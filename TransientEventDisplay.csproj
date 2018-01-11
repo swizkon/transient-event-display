@@ -11,4 +11,7 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
     <DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="2.0.0" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\src\js\" />
+  </ItemGroup>
 </Project>

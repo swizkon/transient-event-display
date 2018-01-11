@@ -1,16 +1,14 @@
 <template>
   <div>
-    <app-nav></app-nav>
     <div id="app">
     </div>
-      <router-view></router-view>
+     <router-view></router-view>
     <app-footer></app-footer>
   </div>
 </template>
 
 <script>
 
-import Nav from './components/Nav'
 import Footer from './components/Footer'
 
   export default {
@@ -20,7 +18,6 @@ import Footer from './components/Footer'
       }
     },
     components: {
-      'app-nav': Nav,
       'app-footer': Footer
     }
   } 

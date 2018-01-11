@@ -6,7 +6,7 @@ namespace TransientEventDisplay.Hubs
 
     using TransientEventDisplay.Domain.Models;
 
-    public class ListMessageHub : Hub
+    public class EventsMessageHub : Hub
     {
         public Task Send(string message)
         {

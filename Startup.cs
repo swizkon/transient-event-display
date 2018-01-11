@@ -68,7 +68,7 @@ namespace TransientEventDisplay
                 })
                 .UseSignalR(routes =>
                 {
-                    routes.MapHub<Hubs.ListMessageHub>("list");
+                    routes.MapHub<Hubs.EventsMessageHub>("events");
                 });
         }
     }

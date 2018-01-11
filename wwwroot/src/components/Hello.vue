@@ -2,14 +2,8 @@
   <div class="hello">
     <h1>{{ label }}</h1>
     <form v-on:submit.prevent="onSubmit">
-      <input class="input-lg" name="entityid" v-model="entityId" placeholder="Enter entity id" />
+      <input class="input-lg" name="channelid" v-model="channelid" placeholder="Enter entity id" />
     </form>
-    - or select preview mock -
-    <ul v-if="items">
-      <li v-for="item in items">
-        <a :href="'/accounts.html#/mocks/' + item">{{ item }}</a>
-      </li>
-    </ul>
   </div>
 </template>
 
@@ -22,24 +16,17 @@
     name: 'hello',
     data() { 
       return {
-        label: `Enter item`,
-        entityId: '',
-        items: null
+        label: `Enter channel id`,
+        channelid: ''
       }
     },
     created () {
         var _this = this;
-            _this.items = [];
 
-          connection = new HubConnection('/list');
+          connection = new HubConnection('/events');
 
           connection.on('send', data => {
               this.$toasted.success('<b>SEND </b>  ' + data);
-          });
-
-          connection.on('itemAdded', (title, list) => {
-              this.$toasted.info('Added ' + title  + ' to ' + list).goAway(2000)
-              this.items.push(title)
           });
 
           connection.on('EventPublished', (category, eventType, data) => {
@@ -57,7 +44,7 @@
         return window['JSON'].stringify(data);
       },
         onSubmit: function (event) {
-          var itemTitle = this.entityId;
+          var itemTitle = this.channelid;
           var data = {
                       "channelId": "default",
                       "eventType": "eventType",
@@ -76,7 +63,7 @@
           }).then(function(data) {
             console.log('Created Gist:', data);
           });
-          this.entityId = "";
+          this.channelid = "";
         }
       }
   }

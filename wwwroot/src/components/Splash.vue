@@ -1,6 +1,5 @@
 <template>
   <div class="container body-content">
-    <app-nav></app-nav>
 
     <div id="app">
       <div class="hello">
@@ -10,28 +9,24 @@
     </div>
 
     <app-footer></app-footer>
-
-
   </div>
 </template>
 
 <script>
 
-import Nav from '../components/Nav'
-import Footer from '../components/Footer'
+    import Footer from '../components/Footer'
 
-  export default {
+    export default {
     name: 'splash',
     data() {
-      return {
-        msg: 'Test of the vue markdown component' 
-      }
+    return {
+    msg: 'Transient Event Display'
+    }
     },
     components: {
-      'app-nav': Nav,
-      'app-footer': Footer
+    'app-footer': Footer
     },
     created () {
     }
-  } 
+    }
 </script>

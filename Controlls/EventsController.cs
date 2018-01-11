@@ -15,9 +15,9 @@ namespace TransientEventDisplay.Controllers
     [Route("api/[controller]")]
     public class EventsController : Controller
     {
-        private readonly IHubContext<ListMessageHub> _hubContext;
+        private readonly IHubContext<EventsMessageHub> _hubContext;
 
-        public EventsController(IHubContext<ListMessageHub> hubContext)
+        public EventsController(IHubContext<EventsMessageHub> hubContext)
         {
             _hubContext = hubContext;
         }

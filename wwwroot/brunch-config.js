@@ -24,9 +24,7 @@ exports.config = {
     paths: {
       // Dependencies and current project directories to watch
       watched: [
-        "src",
-        "web/static",
-        "test/static"
+        "src"
       ]
     },
   
@@ -39,7 +37,7 @@ exports.config = {
     },
     modules: {
       autoRequire: {
-        "js/app.js": ["src/js/app"]
+        // "js/app.js": ["src/js/app"]
       }
     },
     npm: {
