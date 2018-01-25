@@ -4,6 +4,7 @@
     <div id="app">
       <div class="hello">
         <h1>{{ msg }}</h1>
+        <h2>{{ info }}</h2>
       </div>
       <router-view></router-view>
     </div>
@@ -20,7 +21,8 @@
     name: 'splash',
     data() {
     return {
-    msg: 'Transient Event Display'
+    msg: 'Transient Event Display',
+    info: 'Deployed w AppVeyor'
     }
     },
     components: {
