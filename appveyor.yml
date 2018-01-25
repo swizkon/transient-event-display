@@ -48,4 +48,4 @@ clone_depth: 1
 on_finish :
   # any cleanup in here
 
-deploy: off
+deploy: on
