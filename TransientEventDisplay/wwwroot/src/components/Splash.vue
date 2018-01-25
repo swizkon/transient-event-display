@@ -22,7 +22,7 @@
     data() {
     return {
     msg: 'Transient Event Display',
-    info: 'Deployed w AppVeyor automatically'
+    info: 'Deployed w AppVeyor automatically test 2'
     }
     },
     components: {
