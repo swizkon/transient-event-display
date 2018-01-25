@@ -21,6 +21,7 @@ before_build:
   - cmd: dotnet restore ./TransientEventDisplay/TransientEventDisplay.csproj --verbosity m
   - cmd: cd ./TransientEventDisplay/wwwroot
   - cmd: npm install
+  - cmd: npm install brunch
   - cmd: brunch build
   - cmd: cd ../..
 
