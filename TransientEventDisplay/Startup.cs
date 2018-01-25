@@ -27,7 +27,7 @@ namespace TransientEventDisplay
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "Transient Event Display", Version = "v1" });
+                c.SwaggerDoc("v1", new Info { Title = "Transient Event Display API", Version = "v1" });
             });
         }
 
